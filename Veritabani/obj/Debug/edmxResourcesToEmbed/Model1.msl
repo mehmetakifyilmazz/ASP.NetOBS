@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="otomasyonModelStoreContainer" CdmEntityContainer="otomasyonEntities">
+    <EntitySetMapping Name="bolums">
+      <EntityTypeMapping TypeName="otomasyonModel.bolum">
+        <MappingFragment StoreEntitySet="bolum">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="bolumadi" ColumnName="bolumadi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="derslers">
+      <EntityTypeMapping TypeName="otomasyonModel.dersler">
+        <MappingFragment StoreEntitySet="dersler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="dersadi" ColumnName="dersadi" />
+          <ScalarProperty Name="bolum_id" ColumnName="bolum_id" />
+          <ScalarProperty Name="derskredi" ColumnName="derskredi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hocaderslers">
+      <EntityTypeMapping TypeName="otomasyonModel.hocadersler">
+        <MappingFragment StoreEntitySet="hocadersler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="hocaders_id" ColumnName="hocaders_id" />
+          <ScalarProperty Name="hoca_id" ColumnName="hoca_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hocalars">
+      <EntityTypeMapping TypeName="otomasyonModel.hocalar">
+        <MappingFragment StoreEntitySet="hocalar">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+          <ScalarProperty Name="kullaniciadi" ColumnName="kullaniciadi" />
+          <ScalarProperty Name="bolum_id" ColumnName="bolum_id" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ogrenciderslers">
+      <EntityTypeMapping TypeName="otomasyonModel.ogrencidersler">
+        <MappingFragment StoreEntitySet="ogrencidersler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ogrders_id" ColumnName="ogrders_id" />
+          <ScalarProperty Name="ogr_id" ColumnName="ogr_id" />
+          <ScalarProperty Name="vize" ColumnName="vize" />
+          <ScalarProperty Name="final" ColumnName="final" />
+          <ScalarProperty Name="but" ColumnName="but" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ogrencilers">
+      <EntityTypeMapping TypeName="otomasyonModel.ogrenciler">
+        <MappingFragment StoreEntitySet="ogrenciler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+          <ScalarProperty Name="okul_no" ColumnName="okul_no" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="bolum_id" ColumnName="bolum_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="otomasyonModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nw_hoca_dersler">
+      <EntityTypeMapping TypeName="otomasyonModel.nw_hoca_dersler">
+        <MappingFragment StoreEntitySet="nw_hoca_dersler">
+          <ScalarProperty Name="dersadi" ColumnName="dersadi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="hoca_id" ColumnName="hoca_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nw_ogrenci_dersler">
+      <EntityTypeMapping TypeName="otomasyonModel.nw_ogrenci_dersler">
+        <MappingFragment StoreEntitySet="nw_ogrenci_dersler">
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="okul_no" ColumnName="okul_no" />
+          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="but" ColumnName="but" />
+          <ScalarProperty Name="dersadi" ColumnName="dersadi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="final" ColumnName="final" />
+          <ScalarProperty Name="vize" ColumnName="vize" />
+          <ScalarProperty Name="ogr_id" ColumnName="ogr_id" />
+          <ScalarProperty Name="ogrders_id" ColumnName="ogrders_id" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="bolum_id" ColumnName="bolum_id" />
+          <ScalarProperty Name="derskredi" ColumnName="derskredi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="otomasyons">
+      <EntityTypeMapping TypeName="otomasyonModel.otomasyon">
+        <MappingFragment StoreEntitySet="otomasyon">
+          <ScalarProperty Name="bolumadi" ColumnName="bolumadi" />
+          <ScalarProperty Name="ogr_id" ColumnName="ogr_id" />
+          <ScalarProperty Name="dersadi" ColumnName="dersadi" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="hocaadisoyadi" ColumnName="hocaadisoyadi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="hoca_id" ColumnName="hoca_id" />
+          <ScalarProperty Name="hocaders_id" ColumnName="hocaders_id" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="ogrders_id" ColumnName="ogrders_id" />
+          <ScalarProperty Name="bolum_id" ColumnName="bolum_id" />
+          <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+          <ScalarProperty Name="Expr4" ColumnName="Expr4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="HocaKayıt" FunctionName="otomasyonModel.Store.HocaKayıt" />
+    <FunctionImportMapping FunctionImportName="ogrenciNot1" FunctionName="otomasyonModel.Store.ogrenciNot1" />
+    <FunctionImportMapping FunctionImportName="OgrKayıt" FunctionName="otomasyonModel.Store.OgrKayıt" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="otomasyonModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="otomasyonModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="otomasyonModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="otomasyonModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="otomasyonModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="otomasyonModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="otomasyonModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="otomasyonModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="otomasyonModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,12 @@
+D:\OgrenciOtomasyon\Veritabani\bin\Debug\Veritabani.dll.config
+D:\OgrenciOtomasyon\Veritabani\bin\Debug\Veritabani.dll
+D:\OgrenciOtomasyon\Veritabani\bin\Debug\Veritabani.pdb
+D:\OgrenciOtomasyon\Veritabani\bin\Debug\EntityFramework.dll
+D:\OgrenciOtomasyon\Veritabani\bin\Debug\EntityFramework.SqlServer.dll
+D:\OgrenciOtomasyon\Veritabani\bin\Debug\EntityFramework.xml
+D:\OgrenciOtomasyon\Veritabani\bin\Debug\EntityFramework.SqlServer.xml
+D:\OgrenciOtomasyon\Veritabani\obj\Debug\Veritabani.csproj.CoreCompileInputs.cache
+D:\OgrenciOtomasyon\Veritabani\obj\Debug\Veritabani.csproj.CopyComplete
+D:\OgrenciOtomasyon\Veritabani\obj\Debug\Veritabani.dll
+D:\OgrenciOtomasyon\Veritabani\obj\Debug\Veritabani.pdb
+D:\OgrenciOtomasyon\Veritabani\obj\Debug\Veritabani.csproj.AssemblyReference.cache

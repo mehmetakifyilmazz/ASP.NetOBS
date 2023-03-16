@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="otomasyonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="bolum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bolumadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dersler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dersadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bolum_id" Type="Int32" />
+    <Property Name="derskredi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="hocadersler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hocaders_id" Type="Int32" />
+    <Property Name="hoca_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="hocalar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="kullaniciadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bolum_id" Type="Int32" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ogrencidersler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ogrders_id" Type="Int32" />
+    <Property Name="ogr_id" Type="Int32" />
+    <Property Name="vize" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="final" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="but" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ogrenciler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="okul_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bolum_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="nw_hoca_dersler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="dersadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="hoca_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="nw_ogrenci_dersler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="okul_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="but" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dersadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="final" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vize" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ogr_id" Type="Int32" />
+    <Property Name="ogrders_id" Type="Int32" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bolum_id" Type="Int32" />
+    <Property Name="derskredi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="otomasyon">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="Expr4" />
+    </Key>
+    <Property Name="bolumadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ogr_id" Type="Int32" />
+    <Property Name="dersadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Expr2" Type="Int32" />
+    <Property Name="hocaadisoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="hoca_id" Type="Int32" />
+    <Property Name="hocaders_id" Type="Int32" />
+    <Property Name="Expr1" Type="Int32" Nullable="false" />
+    <Property Name="ogrders_id" Type="Int32" />
+    <Property Name="bolum_id" Type="Int32" />
+    <Property Name="Expr3" Type="Int32" />
+    <Property Name="Expr4" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="otomasyonEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bolums" EntityType="Self.bolum" />
+    <EntitySet Name="derslers" EntityType="Self.dersler" />
+    <EntitySet Name="hocaderslers" EntityType="Self.hocadersler" />
+    <EntitySet Name="hocalars" EntityType="Self.hocalar" />
+    <EntitySet Name="ogrenciderslers" EntityType="Self.ogrencidersler" />
+    <EntitySet Name="ogrencilers" EntityType="Self.ogrenciler" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="nw_hoca_dersler" EntityType="Self.nw_hoca_dersler" />
+    <EntitySet Name="nw_ogrenci_dersler" EntityType="Self.nw_ogrenci_dersler" />
+    <EntitySet Name="otomasyons" EntityType="Self.otomasyon" />
+    <FunctionImport Name="HocaKayıt">
+      <Parameter Name="adi" Mode="In" Type="String" />
+      <Parameter Name="soyadi" Mode="In" Type="String" />
+      <Parameter Name="kullaniciadi" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="sifre" Mode="In" Type="String" />
+      <Parameter Name="bolum_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ogrenciNot1">
+      <Parameter Name="ogrders_id" Mode="In" Type="Int32" />
+      <Parameter Name="ogr_id" Mode="In" Type="Int32" />
+      <Parameter Name="vize" Mode="In" Type="Int32" />
+      <Parameter Name="final" Mode="In" Type="Int32" />
+      <Parameter Name="büt" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="OgrKayıt">
+      <Parameter Name="adi" Mode="In" Type="String" />
+      <Parameter Name="soyadi" Mode="In" Type="String" />
+      <Parameter Name="okul_no" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="sifre" Mode="In" Type="String" />
+      <Parameter Name="bolum_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(otomasyonModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(otomasyonModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>
